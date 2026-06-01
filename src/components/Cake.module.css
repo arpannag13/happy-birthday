@@ -1,0 +1,11 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.cake {
+  width: clamp(120px, 22vw, 190px);
+  height: auto;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.3));
+}

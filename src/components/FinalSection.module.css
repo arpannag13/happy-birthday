@@ -1,0 +1,48 @@
+.final {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 1.5rem;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 30%, #133a86 0%, #0a1f44 55%, #04102a 100%);
+}
+
+.text {
+  position: relative;
+  z-index: 3;
+  max-width: 950px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.7rem;
+  justify-content: center;
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 7vw, 5rem);
+  line-height: 1.35;
+}
+
+.word {
+  display: inline-block;
+  padding: 0.08em 0.04em 0.28em;
+  background: linear-gradient(120deg, var(--gold), var(--blue-light), #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.party {
+  display: inline-block;
+}
+
+.sign {
+  position: relative;
+  z-index: 3;
+  margin-top: 2rem;
+  font-size: clamp(1rem, 2.4vw, 1.3rem);
+  color: var(--text-muted);
+  font-weight: 300;
+}

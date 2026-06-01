@@ -1,0 +1,18 @@
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.streamer {
+  position: absolute;
+  top: 0;
+  border-radius: 0 0 6px 6px;
+  transform-origin: top center;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+  will-change: transform;
+}
