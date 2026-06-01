@@ -30,11 +30,15 @@ const captions = [
   "Endless smiles",
 ];
 
+// Prefix with Vite's BASE_URL so paths resolve correctly on GitHub Pages
+// (e.g. /happy-birthday/images/photo-1.jpg) and locally.
+const BASE = import.meta.env.BASE_URL;
+
 export const photos = Array.from({ length: PHOTO_COUNT }, (_, i) => {
   const n = i + 1;
   return {
     id: n,
-    src: `/images/photo-${n}.jpg`,
+    src: `${BASE}images/photo-${n}.jpg`,
     // Caption list cycles so any PHOTO_COUNT works without code changes.
     caption: captions[i % captions.length],
     alt: `Memory ${n} — ${captions[i % captions.length]}`,

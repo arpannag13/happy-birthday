@@ -72,7 +72,7 @@ export default function App() {
         <p>🎉 Celebrating you today, Joyita 🎉</p>
       </footer>
 
-      <MusicPlayer src="/music/birthday.mp3" />
+      <MusicPlayer src={`${import.meta.env.BASE_URL}music/birthday.mp3`} />
     </div>
   )
 }

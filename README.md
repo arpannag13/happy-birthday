@@ -58,3 +58,24 @@ src/
 ├── App.jsx
 └── main.jsx
 ```
+
+## 🚢 Deploy to GitHub Pages
+
+Live URL: **https://arpannag13.github.io/happy-birthday/**
+
+This repo is configured for GitHub Pages with `base: '/happy-birthday/'` in `vite.config.js`,
+and all runtime asset paths use `import.meta.env.BASE_URL` so images and music resolve correctly.
+
+**Option A — Automatic (GitHub Actions, recommended)**
+
+1. In the repo on GitHub, go to **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**.
+2. Push to the `main` branch. The workflow in `.github/workflows/deploy.yml` builds with Node 20 and deploys `dist/` automatically.
+
+**Option B — Manual (gh-pages branch)**
+
+```bash
+npm run deploy   # runs predeploy (build) then publishes dist/ to the gh-pages branch
+```
+
+If using Option B, set **Settings → Pages → Source** to the `gh-pages` branch.
+

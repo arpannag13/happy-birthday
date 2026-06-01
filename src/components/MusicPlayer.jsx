@@ -3,7 +3,9 @@ import { motion } from 'framer-motion'
 import { FaPlay, FaPause, FaMusic } from 'react-icons/fa'
 import styles from './MusicPlayer.module.css'
 
-export default function MusicPlayer({ src = '/music/birthday.mp3' }) {
+export default function MusicPlayer({
+  src = `${import.meta.env.BASE_URL}music/birthday.mp3`,
+}) {
   const audioRef = useRef(null)
   const [playing, setPlaying] = useState(false)
   const [ready, setReady] = useState(true)
