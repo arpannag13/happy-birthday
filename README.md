@@ -78,4 +78,3 @@ npm run deploy   # runs predeploy (build) then publishes dist/ to the gh-pages b
 ```
 
 If using Option B, set **Settings → Pages → Source** to the `gh-pages` branch.
-
