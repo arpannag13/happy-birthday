@@ -5,12 +5,7 @@
   padding: clamp(2.5rem, 6vw, 4rem) clamp(1.75rem, 5vw, 3.5rem);
   border-radius: 6px;
   background-color: #fff8f1;
-  background-image: repeating-linear-gradient(
-    transparent,
-    transparent 37px,
-    rgba(123, 47, 247, 0.1) 38px
-  );
-  color: #3a1f2c;
+  color: #2a3f6b;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
 }
 
@@ -27,15 +22,25 @@
 }
 
 .body {
+  --line: clamp(2.2rem, 5.4vw, 2.9rem);
   font-family: 'Dancing Script', cursive;
-  font-size: clamp(1.35rem, 3.4vw, 1.95rem);
+  font-size: clamp(1.35rem, 3.4vw, 1.9rem);
   font-weight: 600;
-  line-height: 1.7;
-  color: #3a1f2c;
+  line-height: var(--line);
+  color: #2a3f6b;
   white-space: pre-wrap;
   word-break: break-word;
   margin: 0;
-  min-height: 20em;
+  min-height: calc(var(--line) * 9);
+  /* Ruled lines spaced exactly one text-line apart so words rest on them */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(var(--line) - 2px),
+    rgba(46, 123, 246, 0.32) calc(var(--line) - 2px),
+    rgba(46, 123, 246, 0.32) var(--line)
+  );
+  background-position: 0 0;
 }
 
 .cursor {
